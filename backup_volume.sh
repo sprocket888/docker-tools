@@ -22,4 +22,4 @@ then
   usage
 fi
 
-docker run --rm -v $(pwd):/dest_volume -v ${VOLUME_NAME}:/source_volume busybox tar czvf /dest_volume/${ARCHIVE_NAME}.tar.gz /source_volume
+docker run --rm -v $(pwd):/dest_volume -v ${VOLUME_NAME}:/source_volume busybox tar czvf /dest_volume/${ARCHIVE_NAME}.tar.gz -C /source_volume .
